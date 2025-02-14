@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page</title>
+    <link rel="stylesheet" href="css/styles2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400&display=swap" rel="stylesheet"></head>
+<body>
+    <div id="container">
+        <div id="sidebar">
+            <button class="close-btn" onclick="toggleSidebar()">×</button>
+            <div id="sbtext">
+                <a href="index.html"><img src="images/Logo.svg" alt="Logo"></a>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="selected-works.html">Selected Work</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="content">
+            <nav class="navbar">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/Logo.svg" alt="Logo">
+                </a>
+                <div class="hamburger-menu" onclick="toggleSidebar()">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <div id="navbarMenu" class="navbar-menu">
+                    <a href="about.html">About</a>
+                    <a href="selected_works.html">Selected Work</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </nav>
+            <div id="about-box">
+                <img class="profile-photo" src="images/james_taylor.png" alt="James Taylor">
+                <div id="about-box-text">
+                      <h2 class="crimson-text-bold">James Taylor / UI/UX Designer</h2>
+                    <p>
+                      James is a UI/UX designer dedicated to crafting intuitive and elegant experiences. Born in Charlottesville, VA, he moved to Boston to study songwriting at Berklee College of Music. He began his career at Apple in New York, where he spent over a decade studying human interface platforms, patterns, and technologies to hone his skills as a trainer before transitioning to product design and receiving his certification in UI/UX design from Springboard.<br/><br/>
+                      Recently, James contributed to the design of an app used in all Apple Retail stores. His work helped streamline store operations, creating an exceptional experience for employees. Currently, he is seeking opportunities to partner with design-driven companies.<br/><br/>
+                      James’ approach to design is centered around the concept of pleasantness. He believes that pleasant experiences seamlessly integrate form and function, making interactions feel comfortable and familiar. Drawing on his musical background, James imbues his designs with rhythm and harmony. By caring deeply about how his products look, feel, and, most importantly, work, he aims to create interfaces that convey a sense of happiness to users.<br/><br/>
+                      James brings a wealth of knowledge and a diverse skill set, including:
+                    </p>
+                    <ul>
+                        <li>User Research and Analysis: Conducting user research, interviews, and usability testing to gather insights and inform design decisions.</li>
+                        <li>Wireframing and Prototyping: Creating wireframes, interactive prototypes, and mockups using tools like Figma and Sketch.</li>
+                        <li>Visual Design: Applying visual design principles, typography, color theory, and layout to create engaging interfaces.</li>
+                        <li>Interaction Design: Designing interactive elements to ensure pleasant user experiences.</li>
+                        <li>Information Architecture: Organizing and structuring content for enhanced usability.</li>
+                        <li>User-Centered Design: Prioritizing user needs and preferences in all design decisions.</li>
+                        <li>Responsive Design: Ensuring interfaces work seamlessly across different devices and screen sizes.</li>
+                        <li>Design Systems: Creating and maintaining design systems for consistency.</li>
+                        <li>Collaboration and Communication: Working effectively with cross-functional teams and incorporating feedback.</li>
+                        <li>Problem-Solving: Addressing user pain points and improving overall user experience.</li>
+                    </ul>
+                    <p>
+                      James is passionate about user-centered design and continually seeks new challenges that allow him to innovate and improve his craft. In his leisure time, he enjoys listening to podcasts such as 99% Invisible and RadioLab, learning Spanish, and expressing his creativity through photography and music.<br/><br/>
+                      James is excited to connect with others who share his passion for design and technology. If you’re interested in collaborating or learning more about James’ work, feel free to reach out via LinkedIn or directly at James@pleasantbydesign.com.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById('sidebar');
+            var navbar = document.querySelector('.navbar');
+            if (sidebar.classList.contains('open')) {
+                sidebar.classList.remove('open');
+                navbar.style.display = 'flex';
+            } else {
+                sidebar.classList.add('open');
+                navbar.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

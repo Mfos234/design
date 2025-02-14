@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Gallery</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Container for Sidebar and Content -->
+  <div id="container">
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">×</button>
+        <div id="sbtext">
+            <a href="index.html"><img src="images/Logo.svg" alt="Logo"></a>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="selected-works.html">Selected Work</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div id="content">
+        <!-- Custom Hamburger Menu Toggle using Image -->
+
+        <!-- Video Gallery -->
+        <div class="video-gallery">
+          <div class="video-container">
+            <div class="caption" id="caption">
+              <img id="captionImage" class="caption-img" src="images/Logo-montessori.svg" alt="Caption for Video 1">
+              <img id="hamburgerMenu" class="hamburger-menu" src="images/montessori-menu.svg" alt="Menu Icon" onclick="toggleSidebar()">
+            </div>
+            <a id="videoLink" href="montessori-case-study.html">
+              <video id="video" autoplay muted playsinline>
+                <source src="videos/Montessori_Classroom.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </a>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <script src="js/scripts.js"></script>
+  <script>
+    function toggleSidebar() {
+        var sidebar = document.getElementById('sidebar');
+        if (sidebar.classList.contains('open')) {
+            sidebar.classList.remove('open');
+        } else {
+            sidebar.classList.add('open');
+        }
+    }
+  </script>
+</body>
+</html>

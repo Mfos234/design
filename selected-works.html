@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selected Works</title>
+    <link rel="stylesheet" href="css/styles2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <div id="sidebar">
+            <button class="close-btn" onclick="toggleSidebar()">×</button>
+            <div id="sbtext">
+                <a href="index.html"><img src="images/Logo.svg" alt="Logo"></a>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="selected_works.html">Selected Work</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="content">
+            <nav class="navbar">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/Logo.svg" alt="Logo">
+                </a>
+                <div class="hamburger-menu" onclick="toggleSidebar()">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <div id="navbarMenu" class="navbar-menu">
+                    <a href="about.html">About</a>
+                    <a href="selected_works.html">Selected Work</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </nav>
+            <div id="selected-works-box">
+                <a href="montessori-case-study.html">
+                    <div class="video-container">
+                        <video id="videoPlayerSelectedWorks1" autoplay loop muted>
+                            <source src="videos/Montessori_Classroom.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p>Montessori Guide - Education / Tablet App</p>
+                    </div>
+                </a>
+                <a href="tinytales-case-study.html">
+                    <div class="video-container">
+                        <video id="videoPlayerSelectedWorks2" autoplay loop muted>
+                            <source src="videos/TinyTales_Animation.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p>TinyTales - Books and Education / Tablet App</p>
+                    </div>
+                </a>
+                <a href="subtracked-case-study.html">
+                    <div class="video-container">
+                        <video id="videoPlayerSelectedWorks3" autoplay loop muted>
+                            <source src="videos/SubTracked.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p>SubTracked - Subscription Tracker / Mobile App</p>
+                    </div>
+                </a>
+                <a href="winskills-case-study.html">
+                    <div class="video-container">
+                        <video id="videoPlayerSelectedWorks4" autoplay loop muted>
+                            <source src="videos/Winskills.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p>Winskills - Professional Development / Web App</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById('sidebar');
+            var navbar = document.querySelector('.navbar');
+            if (sidebar.classList.contains('open')) {
+                sidebar.classList.remove('open');
+                navbar.style.display = 'flex';
+            } else {
+                sidebar.classList.add('open');
+                navbar.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

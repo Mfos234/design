@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="css/styles2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <div id="sidebar">
+            <button class="close-btn" onclick="toggleSidebar()">×</button>
+            <div id="sbtext">
+                <a href="index.html"><img src="images/Logo.svg" alt="Logo"></a>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="selected-works.html">Selected Work</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="content">
+            <nav class="navbar">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/Logo.svg" alt="Logo">
+                </a>
+                <div class="hamburger-menu" onclick="toggleSidebar()">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <div id="navbarMenu" class="navbar-menu">
+                    <a href="about.html">About</a>
+                    <a href="selected_works.html">Selected Work</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </nav>
+            <div id="contact-box">
+                <p>
+                    <strong>Inquiries</strong>
+                    <br/><br/>
+                    <a href="mailto:James@pleasantbydesign.com?subject=Interest%20in%20Your%20UX%2FUI%20Case%20Studies&body=Hello%2C%0D%0A%0D%0AI%20came%20across%20your%20portfolio%20and%20am%20impressed%20by%20your%20UX%2FUI%20case%20studies.%20I%27d%20love%20to%20learn%20more%20about%20your%20research%20process%20and%20the%20projects%20you%27ve%20worked%20on.%0D%0A%0D%0ABest%20regards%2C%0D%0A%5BYour%20Name%5D" style="color: black; text-decoration: none;">James@pleasantbydesign.com</a>
+                    <br/>
+                    <a href="https://linkedin.com/in/hellojamestaylor">linkedin.com/in/hellojamestaylor</a>
+                    <br/><br/><br/>
+                    Note:
+                    <br/>
+                    James is currently focused on his role at Apple, which limits his capacity to take on additional projects at this time.
+                    However, he is eager to connect with design-driven companies for potential future collaborations and full-time product design roles.
+                    James appreciates your understanding and may not be able to respond to other inquiries. Thank you for your interest in his work.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById('sidebar');
+            var navbar = document.querySelector('.navbar');
+            if (sidebar.classList.contains('open')) {
+                sidebar.classList.remove('open');
+                navbar.style.display = 'flex';
+            } else {
+                sidebar.classList.add('open');
+                navbar.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
